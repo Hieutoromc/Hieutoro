@@ -60,7 +60,7 @@
                 <nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
-                        <li class="breadcrumb-item"><a href="index.html">Dự án đã hợp tác</a></li>
+                        <li class="breadcrumb-item"><a href="project.html">Dự án đã hợp tác</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Chi tiết</li>
                     </ol>
                 </nav>
@@ -78,13 +78,28 @@
                 <div class="bubble-animation-item"></div>
                 <div class="bubble-animation-item"></div>
             </div>
+
             <!-- Image grid -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="https://bit.ly/3zOC1Pj" alt="">
+             <div class="container">
+                <div class="row mb-3">
+                    <div class="">
+                    <div style="display: flex; gap: 10px; padding: 10px; flex-wrap: wrap;">
+                    <img style="border-radius: 16px; max-width: 340px;" src="" id="projectImage1" class="project-image" alt="Project Image1">
+                    <img style="border-radius: 16px; max-width: 340px;" src="" id="projectImage2" class="project-image" alt="Project Image2">
+                    <img style="border-radius: 16px; max-width: 340px;" src="" id="projectImage3" class="project-image" alt="Project Image3">
+                    <img style="border-radius: 16px; max-width: 340px;" src="" id="projectImage4" class="project-image" alt="Project Image4">
                     </div>
                     </div>
+                </div>
+             </div>
+            <!-- <div class="container">
+            <div class="project-details">
+                <h3 id="projectTitle"></h3>
+                <p id="projectDescription"></p>
+            <img style="aspect-ratio: square; height: 300px; margin: auto; border-radius: 16px;" src="" id="projectImage1" class="project-image" alt="Project Image1">
+            <img style="aspect-ratio: square; height: 300px; margin: auto; border-radius: 16px;" src="" id="projectImage2" class="project-image" alt="Project Image2">
+        </div> -->
+
             </div>
             </div>
             <!-- end -->
@@ -110,7 +125,45 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main-style.js"></script>
-    <script src="js/image.js"></script>
+    <script>
+        // Lấy các query parameters từ URL
+        const queryParams = new URLSearchParams(window.location.search);
+        const projectTitle = queryParams.get('title');
+        const projectDescription = queryParams.get('description');
+        const projectImage1 = queryParams.get('image1');
+        const projectImage2 = queryParams.get('image2');
+        const projectImage3 = queryParams.get('image3');
+        const projectImage4 = queryParams.get('image4');
+
+        // Hiển thị thông tin trong trang
+        // document.getElementById('projectTitle').textContent = projectTitle;
+        // document.getElementById('projectDescription').textContent = projectDescription;
+
+        // Hiển thị hình ảnh nếu có URL của ảnh
+        if (projectImage1) {
+            document.getElementById('projectImage1').src = projectImage1;
+        } else {
+            document.getElementById('projectImage1').style.display = 'none';  // Ẩn ảnh nếu không có link ảnh
+        }
+
+        if (projectImage2) {
+            document.getElementById('projectImage2').src = projectImage2;
+        } else {
+            document.getElementById('projectImage2').style.display = 'none';  // Ẩn ảnh nếu không có link ảnh
+        }
+
+        if (projectImage3) {
+            document.getElementById('projectImage3').src = projectImage3;
+        } else {
+            document.getElementById('projectImage3').style.display = 'none';  // Ẩn ảnh nếu không có link ảnh
+        }
+
+        if (projectImage4) {
+            document.getElementById('projectImage4').src = projectImage4;
+        } else {
+            document.getElementById('projectImage4').style.display = 'none';  // Ẩn ảnh nếu không có link ảnh
+        }
+    </script>
 </body>
 
 </html>
