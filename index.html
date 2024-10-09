@@ -17,6 +17,12 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="shortcut icon" href="images/Logo/icon.png" type="images/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+          emailjs.init("Hieutoro"); // Thay YOUR_USER_ID bằng User ID của bạn từ EmailJS
+      })();
+    </script>
 </head>
 
 <body>
@@ -118,9 +124,9 @@
                                 <p>Huỳnh Đặng Minh Hiếu
                                     <br> <br>
                                     MC Minh Hiếu ( Hiếu Toro )
-                                    <br> <br>
+                                    <br>
                                     Đa dạng, trẻ trung, năng động trong cách dẫn dắt chương trình
-                                    <br> br
+                                    <br>
                                     Thí sinh được yêu thích nhất của Người dẫn chương trình Phát Thanh-Truyền hình 2021</p>
                                 <!-- <a href="#" class="btn btn-theme btn-about mt-3">Download My CV</a> -->
                             </div>
@@ -237,6 +243,41 @@
             </div>
         </section>
 
+         <!-- Partner section -->
+         <div class="container">
+            <div class="section-title text-center">
+                <h1 class="title mb-5"></h1>
+            </div>
+            <section class="customer-logos slider">
+              <!-- <div class="slide"><img style="border-radius: 16px;" src="https://bit.ly/4gTx6ND">
+              </div> -->
+          
+              <div class="slide"><img style="border-radius: 16px;" src="https://bit.ly/3BBImhD">
+              </div>
+          
+              <div class="slide"><img style="border-radius: 16px;"  src="https://bit.ly/3zREfNN">
+              </div>
+          
+              <!-- <div class="slide"><img style="border-radius: 16px;" src="https://bit.ly/3Y1c9rq">
+              </div> -->
+          
+              <div class="slide"><img style="border-radius: 16px;" src="https://bit.ly/3zNp3kX">
+              </div>
+          
+              <div class="slide"><img style="border-radius: 16px;" src="https://bit.ly/4dCDgPp">
+              </div>
+          
+              <div class="slide"><img style="border-radius: 16px;" src="https://bit.ly/4gUBgoB">
+              </div>
+          
+              <!-- <div class="slide"><img style="border-radius: 16px;" src="https://bit.ly/480R5WL">
+              </div> -->
+            </section>          
+          </div>
+
+          <!-- End Partner section -->
+
+
         <!-- contact section -->
         <section class="contact-section section-padding" id="contact">
             <div class="container">
@@ -297,7 +338,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <div class="contact-form box">
+                         <div class="contact-form box">
                             <h2 class="form-title text-center">Để lại lời nhắn</h2>
                             <form action="">
                                 <div class="form-group">
@@ -315,10 +356,13 @@
                                 <button type="submit" class="btn btn-theme btn-block btn-form"><a href="mailto:mcminhhieuuu@gmail.com" style="color: white;">Gửi lời nhắn</a></button>
                             </form>
                         </div>
+                        </div>
+                       
                     </div>
                 </div>
             </div>
         </section>
+
 
         <footer class="footer">
             <div class="container">
@@ -346,10 +390,8 @@
     <script>
         new WOW().init();
     </script>
-
     <script src="js/main-style.js"></script>
-    <!-- <script src="js/sheet.js"></script>
-    <script src="https://sheetdb.io/s/t/0o07hphsnd0x7.js"></script> -->
+    <script src="js/partner.js"></script>
 </body>
 
 </html>
