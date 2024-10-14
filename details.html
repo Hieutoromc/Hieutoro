@@ -179,6 +179,27 @@
             document.getElementById('projectImage4').style.display = 'none';  // Ẩn ảnh nếu không có link ảnh
         }
     </script>
+    
+    <script>
+        // Function to check if the images have src and hide the heart divs if not
+function checkAndHideHearts() {
+  // Loop through all the project images
+  $('.project-image').each(function() {
+    // If the image source is empty, hide the heart div next to it
+    if (!$(this).attr('src')) {
+      $(this).siblings('.heart').hide();
+    } else {
+      // If there is an image source, ensure the heart is visible
+      $(this).siblings('.heart').show();
+    }
+  });
+}
+
+// Call the function when the document is ready
+$(document).ready(function() {
+  checkAndHideHearts();
+});
+    </script>
 </body>
 
 </html>
