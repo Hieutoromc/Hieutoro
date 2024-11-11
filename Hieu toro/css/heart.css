@@ -1,0 +1,45 @@
+.heart {
+  cursor: pointer;
+  height: 65px;
+  width: 65px;
+  background-image: url('https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 2900%;
+}
+
+.is_animating {
+  animation: heart-burst .8s steps(28) 1;
+}
+
+.is_animating-reverse {
+  animation: heart-burst-reverse .8s steps(28) 1;
+}
+
+.filled {
+  background-position: right; /* The filled state of the heart */
+}
+
+@keyframes heart-burst {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+.heart.liked {
+  background-position: right; /* Hoặc đổi màu biểu tượng trái tim */
+  background-image: url('path-to-liked-heart-image.png'); /* Đổi hình ảnh trái tim nếu cần */
+}
+
+@keyframes heart-burst-reverse {
+  from {
+    background-position: right;
+  }
+  to {
+    background-position: left;
+  }
+}
+
